@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure File Vault | Security Analysis Platform</title>
+
+    <meta
+        name="description"
+        content="Secure File Vault - A local file security analysis and risk assessment platform."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">⌁</div>
+
+            <div>
+                <strong>Secure<span>Vault</span></strong>
+                <small>FILE SECURITY</small>
+            </div>
+        </div>
+
+        <nav class="navigation">
+
+            <button class="nav-item active" data-section="dashboard">
+                <span>⌂</span>
+                Dashboard
+            </button>
+
+            <button class="nav-item" data-section="scanner">
+                <span>◈</span>
+                File Scanner
+            </button>
+
+            <button class="nav-item" data-section="history">
+                <span>◷</span>
+                Scan History
+            </button>
+
+            <button class="nav-item" data-section="about">
+                <span>◉</span>
+                About Scanner
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="security-status">
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>Local Analysis</strong>
+                    <small>Your files stay on your device</small>
+                </div>
+            </div>
+
+            <div class="version">
+                SecureVault v1.0
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <span class="eyebrow">SECURITY OPERATIONS</span>
+                <h1 id="pageTitle">Security Dashboard</h1>
+            </div>
+
+            <div class="topbar-status">
+                <span class="live-dot"></span>
+                Scanner Ready
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section active">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        <span>✦</span>
+                        LOCAL FILE SECURITY
+                    </span>
+
+                    <h2>
+                        Know what's inside
+                        <span>before you trust it.</span>
+                    </h2>
+
+                    <p>
+                        Analyze files locally for suspicious characteristics,
+                        calculate a security risk score, and generate a clear
+                        security assessment.
+                    </p>
+
+                    <button class="primary-btn" data-go="scanner">
+                        <span>Scan a File</span>
+                        <b>→</b>
+                    </button>
+
+                </div>
+
+                <div class="hero-visual">
+
+                    <div class="scanner-orbit orbit-one"></div>
+                    <div class="scanner-orbit orbit-two"></div>
+
+                    <div class="shield">
+                        <div class="shield-inner">
+                            <span>✓</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-tag tag-one">
+                        SHA-256
+                    </div>
+
+                    <div class="floating-tag tag-two">
+                        RISK AI
+                    </div>
+
+                    <div class="floating-tag tag-three">
+                        LOCAL
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATS -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">◈</div>
+
+                    <div>
+                        <span>Total Scans</span>
+                        <strong id="totalScans">0</strong>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon cyan">✓</div>
+
+                    <div>
+                        <span>Safe Files</span>
+                        <strong id="safeFiles">0</strong>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">!</div>
+
+                    <div>
+                        <span>Flagged Files</span>
+                        <strong id="flaggedFiles">0</strong>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon pink">%</div>
+
+                    <div>
+                        <span>Avg. Risk</span>
+                        <strong id="averageRisk">0%</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD PANELS -->
+            <div class="dashboard-grid">
+
+                <div class="panel quick-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-kicker">QUICK ACTION</span>
+                            <h3>Start a security scan</h3>
+                        </div>
+
+                        <span class="panel-number">01</span>
+                    </div>
+
+                    <p>
+                        Upload any file and SecureVault will inspect its
+                        metadata, extension, filename, size and generate
+                        a risk assessment.
+                    </p>
+
+                    <button class="outline-btn" data-go="scanner">
+                        Open Scanner →
+                    </button>
+
+                </div>
+
+
+                <div class="panel protection-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-kicker">PROTECTION</span>
+                            <h3>Security posture</h3>
+                        </div>
+
+                        <span class="secure-badge">ACTIVE</span>
+                    </div>
+
+                    <div class="posture">
+
+                        <div class="posture-ring">
+                            <div>
+                                <strong id="postureScore">100</strong>
+                                <small>/100</small>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 id="postureTitle">Scanner Ready</h4>
+
+                            <p id="postureText">
+                                No suspicious files have been detected yet.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCANNER -->
+        <section id="scanner" class="section">
+
+            <div class="section-intro">
+
+                <div>
+                    <span class="section-kicker">FILE ANALYSIS ENGINE</span>
+
+                    <h2>Scan a file</h2>
+
+                    <p>
+                        Select a file and run a local security assessment.
+                        Nothing is uploaded to a remote server.
+                    </p>
+                </div>
+
+                <div class="scanner-status">
+                    <span></span>
+                    Engine Ready
+                </div>
+
+            </div>
+
+
+            <!-- UPLOAD -->
+            <div class="upload-box" id="uploadBox">
+
+                <div class="upload-decoration"></div>
+
+                <div class="upload-icon">
+                    <span>↑</span>
+                </div>
+
+                <h3>Drop your file here</h3>
+
+                <p>
+                    Drag & drop your file or choose one from your device
+                </p>
+
+                <div class="file-types">
+                    <span>PDF</span>
+                    <span>DOCX</span>
+                    <span>ZIP</span>
+                    <span>EXE</span>
+                    <span>JS</span>
+                    <span>PY</span>
+                    <span>ANY</span>
+                </div>
+
+
+                <!-- REAL FILE INPUT -->
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept="*/*"
+                >
+
+                <button
+                    type="button"
+                    class="choose-btn"
+                    id="chooseFileBtn"
+                >
+                    Choose File
+                </button>
+
+
+                <div
+                    id="selectedFile"
+                    class="selected-file"
+                ></div>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div
+                id="scanResult"
+                class="scan-result hidden"
+            >
+
+                <div class="result-header">
+
+                    <div>
+                        <span class="section-kicker">ANALYSIS COMPLETE</span>
+                        <h3 id="resultFileName">File Analysis</h3>
+                    </div>
+
+                    <div
+                        id="riskBadge"
+                        class="risk-badge"
+                    >
+                        SAFE
+                    </div>
+
+                </div>
+
+
+                <div class="result-main">
+
+                    <div class="risk-score">
+
+                        <div class="risk-circle">
+
+                            <svg viewBox="0 0 120 120">
+
+                                <circle
+                                    class="risk-track"
+                                    cx="60"
+                                    cy="60"
+                                    r="50"
+                                ></circle>
+
+                                <circle
+                                    id="riskCircle"
+                                    class="risk-progress"
+                                    cx="60"
+                                    cy="60"
+                                    r="50"
+                                ></circle>
+
+                            </svg>
+
+                            <div class="risk-number">
+                                <strong id="riskScore">0</strong>
+                                <span>RISK</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-summary">
+
+                        <span class="result-label">
+                            SECURITY ASSESSMENT
+                        </span>
+
+                        <h3 id="riskTitle">
+                            File appears safe
+                        </h3>
+
+                        <p id="riskDescription">
+                            No major suspicious indicators were detected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHECKS -->
+                <div class="analysis-grid">
+
+                    <div class="analysis-card">
+                        <span>FILE TYPE</span>
+                        <strong id="analysisType">—</strong>
+                        <small id="analysisTypeStatus">Analyzed</small>
+                    </div>
+
+                    <div class="analysis-card">
+                        <span>FILE SIZE</span>
+                        <strong id="analysisSize">—</strong>
+                        <small id="analysisSizeStatus">Checked</small>
+                    </div>
+
+                    <div class="analysis-card">
+                        <span>EXTENSION</span>
+                        <strong id="analysisExtension">—</strong>
+                        <small id="analysisExtensionStatus">Checked</small>
+                    </div>
+
+                    <div class="analysis-card">
+                        <span>SHA-256</span>
+                        <strong id="analysisHash">Calculating...</strong>
+                        <small>Cryptographic hash</small>
+                    </div>
+
+                </div>
+
+
+                <!-- INDICATORS -->
+                <div class="indicators-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-kicker">DETECTION RULES</span>
+                            <h3>Security indicators</h3>
+                        </div>
+                    </div>
+
+                    <div id="indicatorsList"></div>
+
+                </div>
+
+
+                <div class="result-actions">
+
+                    <button
+                        class="primary-btn"
+                        id="downloadReport"
+                    >
+                        Download Security Report
+                    </button>
+
+                    <button
+                        class="outline-btn"
+                        id="scanAnother"
+                    >
+                        Scan Another File
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORY -->
+        <section id="history" class="section">
+
+            <div class="section-intro">
+
+                <div>
+                    <span class="section-kicker">LOCAL RECORDS</span>
+                    <h2>Scan History</h2>
+
+                    <p>
+                        Previous security assessments stored locally
+                        in your browser.
+                    </p>
+                </div>
+
+                <button
+                    class="danger-btn"
+                    id="clearHistory"
+                >
+                    Clear History
+                </button>
+
+            </div>
+
+
+            <div
+                id="historyList"
+                class="history-list"
+            ></div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+
+            <div class="about-grid">
+
+                <div class="about-card large">
+
+                    <span class="section-kicker">ABOUT SECUREVAULT</span>
+
+                    <h2>
+                        Practical file security,
+                        without the complexity.
+                    </h2>
+
+                    <p>
+                        SecureVault is a client-side file analysis platform
+                        designed to demonstrate practical security assessment
+                        techniques through a modern security operations
+                        interface.
+                    </p>
+
+                    <p>
+                        The scanner evaluates multiple file characteristics
+                        and combines them into a risk score to help identify
+                        potentially suspicious files.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="about-icon">⌁</div>
+
+                    <h3>SHA-256</h3>
+
+                    <p>
+                        Generates a cryptographic fingerprint for the selected
+                        file using the Web Crypto API.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="about-icon">!</div>
+
+                    <h3>Risk Detection</h3>
+
+                    <p>
+                        Identifies potentially risky extensions, filenames,
+                        file sizes and suspicious characteristics.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="about-icon">◉</div>
+
+                    <h3>Privacy First</h3>
+
+                    <p>
+                        Analysis happens locally in the browser.
+                        Files are not uploaded to an external service.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="about-icon">◷</div>
+
+                    <h3>Local History</h3>
+
+                    <p>
+                        Scan results can be stored in browser LocalStorage
+                        for quick reference.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- TOAST -->
+    <div
+        id="toast"
+        class="toast"
+    ></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
